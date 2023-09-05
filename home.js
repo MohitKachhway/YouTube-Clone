@@ -96,7 +96,7 @@ function renderVideo(arr){
 }
 
 async function getData(searchString){
-    const url= `${baseUrl}/search?key=${apiKey}&q=${searchString}&part=snippet&maxResults=5`;
+    const url= `${baseUrl}/search?key=${apiKey}&q=${searchString}&part=snippet&maxResults=20`;
     try{
         let responce = await fetch(url);
         let data = await responce.json();
