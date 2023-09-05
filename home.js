@@ -96,7 +96,6 @@ function renderVideo(arr){
 }
 
 async function getData(searchString){
-    console.log(90)
     const url= `${baseUrl}/search?key=${apiKey}&q=${searchString}&part=snippet&maxResults=5`;
     try{
         let responce = await fetch(url);
@@ -120,7 +119,6 @@ async function getData(searchString){
 inputbtn.addEventListener("keyup",(event)=>{
     if(event.key==="Enter"||event.keyCode===13){
         let searchString =inputbtn.value;
-        console.log(searchString)
      getData(searchString);
      }
  })
